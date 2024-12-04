@@ -27,7 +27,7 @@ docker push davarski/platformservice:latest
 ### Install k3d and create cluster
 
 ```
-k3d cluster create istio  --k3s-arg "--disable=traefik@server:0" \
+k3d cluster create dotnet  --k3s-arg "--disable=traefik@server:0" \
        --port 9443:443@loadbalancer \
        --port 8080:80@loadbalancer \
        --api-port 6443 \
