@@ -15,6 +15,15 @@ Microservices with c#, docker and kubernetes
 
 HOWTO:
 
+### Build/Push docker images
+
+```
+docker build -t davarski/commandservice:latest .
+docker push davarski/commandservice:latest 
+docker build -t davarski/platformservice:latest .
+docker push davarski/platformservice:latest
+```
+
 ### Install k3d and create cluster
 
 ```
@@ -44,6 +53,10 @@ PlatformService/appsettings.Development.json:    "PlatformsConn": "Server=localh
 kubectl create secret generic mssql-secret --from-literal=SA_PASSWORD="pa55w0rd!"
 
 kubectl apply -f K8S/*.yaml
+
+kubectl get ing
+NAME          CLASS    HOSTS      ADDRESS       PORTS   AGE
+ingress-srv   <none>   acme.com   172.17.15.2   80      38m
 
 grep acme /etc/hosts
 172.17.15.2    acme.com
