@@ -52,7 +52,7 @@ PlatformService/appsettings.Development.json:    "PlatformsConn": "Server=localh
 
 kubectl create secret generic mssql-secret --from-literal=SA_PASSWORD="pa55w0rd!"
 
-kubectl apply -f K8S/*.yaml
+kubectl apply -f K8S/
 
 kubectl get ing
 NAME          CLASS    HOSTS      ADDRESS       PORTS   AGE
