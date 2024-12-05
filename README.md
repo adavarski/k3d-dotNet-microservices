@@ -54,7 +54,6 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/mast
 ```
 
 $ grep -ri pa55w0rd *
-K8S/mssql-plat-depl.yaml.BAK:# kubectl create secret generic mssql-secret --from-literal=SA_PASSWORD="pa55w0rd!"
 K8S/mssql-plat-depl.yaml:# kubectl create secret generic mssql-secret --from-literal=SA_PASSWORD="pa55w0rd!"
 PlatformService/appsettings.Production.json:    "PlatformsConn": "Server=mssql-clusterip-srv,1433;Initial Catalog=platformsdb;User ID=sa;Password=pa55w0rd!;TrustServerCertificate=True"
 PlatformService/appsettings.Development.json:    "PlatformsConn": "Server=localhost,1443;Initial Catalog=platformsdb;User ID=sa;Password=pa55w0rd!"
